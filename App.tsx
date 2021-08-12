@@ -1,15 +1,6 @@
 import React, {useEffect} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Icon from './src/icon-font.js';
 import SplashScreen from 'react-native-splash-screen';
 
@@ -17,12 +8,6 @@ const App = () => {
   useEffect(() => {
     SplashScreen.hide();
   });
-
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
   return (
     <>
@@ -57,8 +42,8 @@ const styles = StyleSheet.create({
     height: '100%',
     flex: 1,
     justifyContent: 'space-evenly',
-    paddingLeft: "20%",
-    paddingVertical: "20%"
+    paddingLeft: '20%',
+    paddingVertical: '20%',
   },
   text: {
     fontSize: 26,
